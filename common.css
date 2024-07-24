@@ -6,21 +6,32 @@
     font-style: normal;
 }
 
-html {
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+ }
+
+body, ul, li, p {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
     overflow-x :  hidden;
  }
 
 body {
     font-family: 'Nanum Gothic', sans-serif;
     color: #151515;
-    margin: 0;
-    padding: 0;
-    background-color: #fefefe;
+    background-color: #efefef;
     font-size: 16px;
 }
 
 section {
     /* background-color: #999; */
+    margin: 0;
     padding: 25px;
     text-align: center;
 }
@@ -28,8 +39,15 @@ section {
 h1 {
     font-size: 2em;
     font-weight: 600;
+    color: #c950cf;
 }
 
+h2{
+    font-size: 2em;
+    font-weight: 600;
+}
+
+/* font class */
 .bodoni {
     font-family: "Bodoni Moda SC", serif;
     font-optical-sizing: auto;
@@ -52,77 +70,80 @@ h1 {
     font-weight: 400;
 }
 
-/* .container {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-} */
-
+/* main intro */
 section.intro {
     position: relative;
     height: 100vh; /* 100% of the viewport height */
     width: 100vw;  /* 100% of the viewport width */
-    overflow: hidden; /* for adding line :before  */
-    background-image: url("https://github.com/user-attachments/assets/62d4ed80-c4a6-4543-ad1f-3bf80dc6be6f");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-color: rgba(255, 255, 255, 0.3);
+    max-width: 430px;
+    max-height: 800px;
+    overflow: hidden;
     padding: 0;
     font-weight: 500;
 }
 
-.title {
-    text-align: left;
-    font-size: 3.4em;
-    line-height: 90%;
-    margin: 0 auto;
+.main_img {
+    background-image: url("https://github.com/user-attachments/assets/108d8d19-d436-4c18-a9ae-83ecdd7aef08");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: rgba(255, 255, 255, 0.3);
 }
-.title p {
-    position: absolute;
-    top: 16vh;
-    left: 6vw;
-    width: 90vw;
-}
-.title span {
-    font-size: 0.7em;
-    line-height: 200%;
-}
+
+/* .intro img{
+    width: 100%;
+} */
+
 /* adding vertical lines */
 .title {
-    display: inline-block;
+    /* display: inline-block; */
     zoom: 1;
     vertical-align: top;
     position: relative;
     /* padding: 150px 35px 0; */
     height: 100%;
     width: 100%;
+
+    text-align: left;
+    /* font-size: 40px; */
+    line-height: 90%;
+    margin: 0 auto;
 }
-.title:before,
-.title:after {
+.title:before, .title:after {
     content: '';
     display: block;
     position: absolute;
     border-left: 1px solid #151515;
-    left: 10vw;
+    left: 35px;
 }
 .title:before {
-    top: 0;
-    height: 21vh;
+    top: 15px;
+    height: 50px;
 }
 .title:after { 
-    bottom: 6vh;
-    height: 46vh;
+    bottom: 30px;
+    height: 60vh;
+}
+
+.title p {
+    position: absolute;
+    top: 70px;
+    left: 30px;
+    /* width: 100%; */
+    font-size: 13vw;
+}
+.title span {
+    font-size: 0.7em;
+    line-height: 200%;
 }
 
 .intro .date {
     position: absolute;
-    bottom: 4vh;
-    left: 0;
-    font-size: 2em;
+    bottom: 15px;
+    right: 30px;
+    font-size: 1.8em;
     margin: 0;
-    width: 90vw;
+    width: 100%;
     text-align: right;
     line-height: 170%;
 }
@@ -132,9 +153,9 @@ section.intro {
     display: block;
     position: absolute;
     border-bottom: 1px solid #151515;
-    bottom: 2vh;
-    left: 10vw;
-    width: 52vw;
+    bottom: 15px;
+    left: 65px;
+    width: 55%;
 }
 
 /* sec2 info */
@@ -148,7 +169,7 @@ section.intro {
     padding: 25px 20px;
     box-shadow: 0 0 10px rgba(214, 158, 228, 0.5);
 }
-.info h1{margin: 5px 0;}
+.info h2{margin: 5px 0;}
 .info p {
     font-size: 1.2em;
     margin: 0;
@@ -159,17 +180,249 @@ section.intro {
 
 .greeting {
     font-family: 'RIDIBatang';
-    background-color: #efefef;
     /* text-align: left; */
-    font-size: 1.15em;
+    /* font-size: 1.15em; */
     padding: 40px 0;
 }
-.greeting h1{font-size: 1.6em;margin-bottom: 60px;}
+.greeting h1{
+    font-size: 1.7em;
+    margin-bottom: 60px;
+    color: #c950cf;
+}
 .greeting .textbox{
-    padding-bottom: 25px;
+    padding: 0 30px 25px;
     line-height: 1.6;
 }
 
+/* calendar */
+.cal{
+    background-color: #ddd;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+td {
+	padding: 0;
+}
+
+.calendar-container {
+	position: relative;
+	/* width: 80vw; */
+    letter-spacing: 0;
+    /* border: 0.5px solid #999; */
+    padding: 30px 0 15px;
+    background-color: #eee;
+}
+
+.day {
+	font-size: 4em;
+	font-weight: 900;
+	line-height: 1em;
+}
+
+.month {
+	font-size: 2em;
+	line-height: 1em;
+	text-transform: lowercase;
+}
+
+.calendar {
+	/* background: #fff; */
+	margin-top: 20px;
+	color: #555;
+	display: inline-block;
+	/* padding: 1em; */
+}
+
+.calendar thead {
+	color: #151515;
+	font-weight: 700;
+	text-transform: uppercase;
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
+}
+.calendar thead td {
+    padding: 0.4em;
+}
+
+.calendar td {
+	padding: 1em 0.5em;
+	text-align: center;
+}
+
+/* .calendar tbody td:hover {
+	background: #cacaca;
+	color: #fff;
+} */
+
+.calendar td.current-day {
+	color: #d233e0;
+    font-weight: 700;
+    font-size: 1.3em;
+    padding: 0;
+}
+
+.prev-month,
+.next-month {
+	color: #cacaca;
+}
+
+
+/* countdown */
+
+.container {
+    color: #333;
+    margin: 30px auto;
+    text-align: center;
+}
+
+  
+li {
+width: 13%;
+display: inline-block;
+font-size: 1em;
+list-style-type: none;
+padding: 0.5em 1em;
+text-transform: uppercase;
+margin-right: 0.5em;
+background-color: #eee;
+/* border: 0.5px solid #999; */
+}
+
+li:last-child{
+margin-right: 0;
+}
+
+li span {
+display: block;
+font-size: 2em;
+}
+
+.emoji {
+display: none;
+padding: 1rem;
+}
+
+.emoji span {
+font-size: 4rem;
+padding: 0 .5rem;
+}
+  
+/* timeline */
+.cont {
+    width: 80%;
+    padding: 50px 0;
+    margin: 50px auto;
+    position: relative;
+    overflow: hidden;
+}
+ 
+.cont:before {
+content: '';
+position: absolute;
+top: 0;
+left: 50%;
+margin-left: -1px;
+width: 2px;
+height: 100%;
+background: #CCD1D9;
+z-index: 1
+}
+
+.timeline-block {
+width: -webkit-calc(50% + 8px);
+width: -moz-calc(50% + 8px);
+width: calc(50% + 8px);
+display: -webkit-box;
+display: -webkit-flex;
+display: -moz-box;
+display: flex;
+-webkit-box-pack: justify;
+-webkit-justify-content: space-between;
+-moz-box-pack: justify;
+justify-content: space-between;
+clear: both;
+}
+
+.timeline-block-right {
+float: right;
+}
+
+.timeline-block-left {
+float: left;
+direction: rtl
+}
+
+.marker {
+width: 16px;
+height: 16px;
+border-radius: 50%;
+border: 2px solid #F5F7FA;
+background: #4FC1E9;
+margin-top: 10px;
+z-index: 9999
+}
+
+.timeline-content {
+width: 95%;
+padding: 0 15px;
+color: #666
+}
+
+.timeline-content h3 {
+margin-top: 5px;
+margin-bottom: 5px;
+font-size: 25px;
+font-weight: 500
+}
+
+.timeline-content span {
+font-size: 15px;
+color: #a4a4a4;
+}
+
+.timeline-content p {
+font-size: 14px;
+line-height: 1.5em;
+word-spacing: 1px;
+color: #888;
+}
+
+
+
+/* 
+모바일 화면 반응형 조정
+
+그미만 -> 화면고정
+320 이상-> 폰트 사이즈 줄이기 / 패딩 줄이기
+375 이상 -> 기본값
+425 이상 -> 바디 425픽셀 고정값으로  화면감싸기
+*/
+
+
+
+
+/* Mobile - large */
+@media (min-width: 430px) {
+    body {
+        width: 430px;
+        margin: 0 auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+    section.intro {
+        width: 100%;
+    }
+    .title p {
+        font-size: 58px;
+    }
+    .title.main_img{
+        background-size: 100% auto;
+        background-position: center;
+
+    }
+}
 
 
 /* .btn {
