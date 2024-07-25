@@ -48,14 +48,14 @@
         <section class="info">
             <div class="textbox bodoni">
                 <h2>SAVE THE DATE</h2>
-                <P><strong>SEP.14.24. SAT. 10:00am</strong></P>
+                <P class="info_date"><strong>SEP.14.24. SAT. 10:00am</strong></P>
                 <!-- <p>Cordially invite you to their wedding</p> -->
                 <P class="place"><strong>THE JERICHO TERRACE</strong></P>
                 <P>249 Jericho Turnpike, Mineola, NY 11501</P>
             </div>
         </section>
         <section class="greeting">
-            <h1 class="above">we are getting married</h1>
+            <h1 class="above">We are getting married</h1>
             <div class="ko textbox">
                 <p>
                     사랑은 서로를 마주보는 것이 아니라<br />
@@ -73,30 +73,33 @@
 
             </div>
             <div class="en textbox">
-                "Life has taught us that love does not consist in gazing at each other but in looking outward together
-                in
-                the same direction" - Antoine de Saint-Exupéry
+                "Life has taught us that love <br />
+                does not consist in gazing at <br />
+                each other but in looking outward <br />
+                together in the same direction" <br />
+                <span>-Antoine de Saint-Exupéry</span> <br />
             </div>
         </section>
         <section class="cal bodoni">
-            <h1 class="above">calendar</h1>
+            <h1 class="above">Calendar</h1>
             <div class="calendar-container">
 
                 <div class="cal-title">
+                    <p>September | 14</p>
                     <!-- <div class="day">14</div> -->
-                    <div class="month">September | 14</div>
+                    <!-- <div class="month">September</div> -->
                 </div>
 
                 <table class="calendar">
                     <thead>
                         <tr>
-                            <td>Mon</td>
-                            <td>Tue</td>
-                            <td>Wed</td>
-                            <td>Thu</td>
-                            <td>Fri</td>
-                            <td>Sat</td>
-                            <td>Sun</td>
+                            <td>M</td>
+                            <td>T</td>
+                            <td>W</td>
+                            <td>T</td>
+                            <td>F</td>
+                            <td>S</td>
+                            <td>S</td>
                         </tr>
                     </thead>
 
@@ -118,7 +121,7 @@
                             <td>11</td>
                             <td>12</td>
                             <td>13</td>
-                            <td class="current-day above">14</td>
+                            <td class="current-day above"></td>
                         </tr>
 
                         <tr>
@@ -156,7 +159,7 @@
             <div class="container">
                 <div id="countdown">
                     <ul>
-                        <li><span id="days"></span>days</li>
+                        <li><span id="days"></span>Days</li>
                         <li><span id="hours"></span>Hour</li>
                         <li><span id="minutes"></span>Min</li>
                         <li><span id="seconds"></span>Sec</li>
@@ -168,64 +171,102 @@
                 </div>
             </div>
         </section>
-        <section class="timeline">
-            <h1 class="above">Wedding Day Schedule</h1>
-            <div class="cont">
-                <div class="timeline-block timeline-block-right">
+        <section class="schedule">
+            <h1 class="above">Wedding day Schedule</h1>
+            <h2 class="bodoni">September 14th, 2024 <br/> The Jericho Terrace, NY</h2>
+            <div class="timeline">
+                
+                <div class="timeline-block">
                     <div class="marker"></div>
-                    <div class="timeline-content">
-                        <h3>Ceremony</h3>
-                        <span>11AM</span>
-                        <p>Spotlight Chapel (1st floor)</p>
+                    <div class="timeline-content t_left">
+                        <div class="icon"></div>
+                        <h3 class="bodoni">Ceremony</h3>
+                    </div>
+                    <div class="timeline-content t_right">
+                        <span class="bodoni">11:00 am</span>
+                        <p>Spotlight Chapel<br/>-1st floor</p>
+                    </div>
+                </div>
+                <div class="timeline-block">
+                    <div class="marker"></div>
+                    <div class="timeline-content t_left">
+                        <div class="icon"></div>
+                        <h3 class="bodoni">Photo time</h3>
+                    </div>
+                    <div class="timeline-content t_right">
+                        <span class="bodoni">11:45 am</span>
+                        <!-- <p>Spotlight Chapel<br/>-1st floor</p> -->
                     </div>
                 </div>
 
-                <div class="timeline-block timeline-block-left">
+                <div class="timeline-block">
                     <div class="marker"></div>
-                    <div class="timeline-content">
-                        <h3>Seconed Year</h3>
-                        <span>Some work experience</span>
+                    <div class="timeline-content t_left">
+                        <div class="icon"></div>
+                        <h3 class="bodoni">Cocktail </h3>
+                    </div>
+                    <div class="timeline-content t_right">
+                        <span class="bodoni">12:00pm</span>
+                        <p>Garden Room<br/>-2nd floor</p>
                     </div>
                 </div>
-
-                <div class="timeline-block timeline-block-right">
+                <div class="timeline-block">
                     <div class="marker"></div>
-                    <div class="timeline-content">
-                        <h3>Third Year</h3>
-                        <span>Some work experience</span>
+                    <div class="timeline-content t_left">
+                        <div class="icon"></div>
+                        <h3 class="bodoni">Lunch</h3>
+                    </div>
+                    <div class="timeline-content t_right">
+                        <span class="bodoni">12:15pm</span>
+                        <!-- <p>Garden Room<br/>-2nd floor</p> -->
                     </div>
                 </div>
-
-                <div class="timeline-block timeline-block-left">
+                <div class="timeline-block">
                     <div class="marker"></div>
-                    <div class="timeline-content">
-                        <h3>Fourth Year</h3>
-                        <span>Some work experience</span>
+                    <div class="timeline-content t_left">
+                        <div class="icon"></div>
+                        <h3 class="bodoni">Reception</h3>
+                    </div>
+                    <div class="timeline-content t_right">
+                        <span class="bodoni">13:00pm</span>
+                        <p>Ballroom (Penthouse)<br/>-3rd floor</p>
                     </div>
                 </div>
-
-                <div class="timeline-block timeline-block-right">
+                <div class="timeline-block">
                     <div class="marker"></div>
-                    <div class="timeline-content">
-                        <h3>Fifth Year</h3>
-                        <span>Some work experience</span>
+                    <div class="timeline-content t_left">
+                        <div class="icon"></div>
+                        <h3 class="bodoni">Cake Cutting</h3>
+                    </div>
+                    <div class="timeline-content t_right">
+                        <span class="bodoni">16:00 pm</span>
+                        <!-- <p>Ballroom (Penthouse)<br/>-3rd floor -->
                     </div>
                 </div>
-
-                <div class="timeline-block timeline-block-left">
+                <div class="timeline-block">
                     <div class="marker"></div>
-                    <div class="timeline-content">
-
-                        <h3>Fourth Year</h3>
-                        <span>Some work experience</span>
+                    <div class="timeline-content t_left">
+                        <div class="icon"></div>
+                        <h3 class="bodoni">Grand Exit</h3>
+                        
+                    </div>
+                    <div class="timeline-content t_right">
+                        <span class="bodoni">17:00 pm</span>
+                        <!-- <p>??<br/>(3rd floor)</p> -->
                     </div>
                 </div>
 
             </div>
         </section>
-        <section class="dresscode"></section>
-        <section class="rsvp"></section>
-        <section class="location"></section>
+        <section class="dresscode">
+            <h1 class="above">Dresscode</h1>
+        </section>
+        <section class="rsvp">
+            <h1 class="above">RSVP</h1>
+        </section>
+        <section class="location">
+            <h1 class="above">The Wedding Hall</h1>
+        </section>
     </div>
 
     <!-- <div id="rsvp" class="rsvp-modal">
