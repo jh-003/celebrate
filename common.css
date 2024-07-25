@@ -1,11 +1,11 @@
-/* common.css */
+/* font */
 @font-face {
     font-family: 'RIDIBatang';
     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
-
+/* tag reset */
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -13,38 +13,29 @@
     outline: none;
  }
 
-body, ul, li, p {
+body, h1, h2, ul, li, p, button {
     padding: 0;
     margin: 0;
 }
 
-html, body {
-    overflow-x :  hidden;
- }
-
-body {
-    font-family: 'Nanum Gothic', sans-serif;
-    color: #151515;
-    background-color: #efefef;
-    font-size: 16px;
+ul {
+    list-style: none; 
 }
 
-section {
-    background-color: #efefef;
-    margin: 0;
-    padding: 25px;
-    text-align: center;
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+    color: inherit; 
 }
-
-h1 {
-    font-size: 2em;
-    font-weight: 600;
-    color: #c950cf;
+    
+button, input {
+    border: none;
+    background: none;
+    color: inherit;
+    cursor: pointer; 
 }
-
-h2{
-    font-size: 2em;
-    font-weight: 600;
+    
+img {
+    vertical-align: top; 
 }
 
 /* font class */
@@ -70,10 +61,50 @@ h2{
     font-weight: 400;
 }
 
+/* common class */
+.circle {
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-box-shadow: 1px 1px 3px #666;
+    box-shadow: 1px 1px 3px #666; 
+}
+
+/* common css */
+html, body {
+    overflow-x :  hidden;
+}
+
+body {
+    font-family: 'Nanum Gothic', sans-serif;
+    color: #151515;
+    background-color: #efefef;
+    font-size: 16px;
+}
+
+section {
+    display: block;
+    background-color: #efefef;
+    margin: 0;
+    padding: 25px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: 600;
+    color: #c950cf;
+}
+
+h2{
+    font-size: 2em;
+    font-weight: 600;
+}
+
 /* main intro */
 section.intro {
-    height: 100vh; /* 100% of the viewport height */
-    width: 100vw;  /* 100% of the viewport width */
+    position: relative;
+    height: 100vh; 
+    width: 100vw; 
     max-width: 430px;
     max-height: 800px;
     overflow: hidden;
@@ -85,31 +116,30 @@ section.intro {
 .main_img {
     position: fixed;
     z-index: -1;
-    height: 100vh; /* 100% of the viewport height */
-    width: 100vw;  /* 100% of the viewport width */
+    height: 100vh; 
+    width: 100vw;
     top: 0;
     left: 0;
     overflow: hidden;
 }
-.main_img::before {
+.main_img:after {
     content: '';
     display: block;
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    max-width: 430px;
+    margin: 0 auto;
     background-image: url("https://github.com/user-attachments/assets/108d8d19-d436-4c18-a9ae-83ecdd7aef08");
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
+    /* 아이폰에서 오류남 */
     background-color: rgba(255, 255, 255, 0.3);
 }
-
-/* .intro img{
-    width: 100%;
-} */
 
 /* adding vertical lines */
 .title {
@@ -118,9 +148,8 @@ section.intro {
     vertical-align: top;
     position: relative;
     /* padding: 150px 35px 0; */
-    height: 100%;
-    width: 100%;
-
+    /* height: 100%; */
+    /* width: 100%; */
     text-align: left;
     /* font-size: 40px; */
     line-height: 90%;
@@ -129,25 +158,28 @@ section.intro {
 .title:before, .title:after {
     content: '';
     display: block;
-    position: absolute;
     border-left: 1px solid #151515;
-    left: 35px;
+    margin: 0 50px;
 }
 .title:before {
-    top: 15px;
-    height: 50px;
+    /* top: 15px; */
+    height: 15vh;
+    margin-top: 30px;
 }
 .title:after { 
-    bottom: 30px;
-    height: 60vh;
+    /* bottom: 30px; */
+    height: 42vh;
+    /* border-bottom: 1px solid #151515; */
+    /* width: 45vw; */
 }
 
 .title p {
-    position: absolute;
-    top: 70px;
-    left: 30px;
+    /* position: absolute; */
+    /* top: 70px; */
+    /* left: 30px; */
     /* width: 100%; */
-    font-size: 13vw;
+    font-size: 12vw;
+    margin-left: 33px;
 }
 .title span {
     font-size: 0.7em;
@@ -155,24 +187,35 @@ section.intro {
 }
 
 .intro .date {
-    position: absolute;
-    bottom: 15px;
-    right: 30px;
+    margin: 0 50px;
+    position: relative;
+    /* bottom: 15px; */
+    /* right: 30px; */
     font-size: 1.8em;
-    margin: 0;
-    width: 100%;
+    /* margin: 0; */
+    /* width: 80%; */
     text-align: right;
-    line-height: 170%;
+    /* line-height: 170%; */
+    height: 50px;
 }
 /* adding horizontal line */
+.intro .date:before, .intro .date:after {
+    display: inline-block;
+    position: absolute;
+}
 .intro .date:before {
     content: '';
-    display: block;
-    position: absolute;
-    border-bottom: 1px solid #151515;
-    bottom: 15px;
-    left: 65px;
-    width: 55%;
+    width: 60%;
+border-top: 1px solid #151515;
+top: 0;left: 0;height: 100%;
+    /* bottom: 15px; */
+    /* left: 65px; */
+    /* width: 55%; */
+}
+.intro .date:after {
+    content: '09.14.24';
+    width: 40%;
+    top: -32px;right: 0;
 }
 
 /* sec2 info */
@@ -423,9 +466,11 @@ color: #888;
 
 /* Mobile - large */
 @media (min-width: 430px) {
-    body {
-        width: 430px;
+    .wrap {
+        max-width: 430px;
         margin: 0 auto;
+        /* -webkit-border-radius: 30px 30px 0 0;
+        border-radius: 30px 30px 0 0; */
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     }
     section.intro {
