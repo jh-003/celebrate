@@ -274,12 +274,23 @@ top: 0;left: 0;height: 100%;
     font-family: 'RIDIBatang';
     /* text-align: left; */
     /* font-size: 1.15em; */
-    padding: 20px 0;
+    padding: 20px 0 50px;
     background-color: #303030;
     color: #efefef;
+    background-image: url("https://github.com/user-attachments/assets/534a3b1a-8f67-4244-bf08-0af0be1bcb22");
+    background-position: bottom;
+    background-size: cover;
+
 }
+/* .greeting:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+} */
+
 .greeting h1{
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 .greeting p {padding: 8px 0;}
 .greeting .textbox{
@@ -406,12 +417,12 @@ td {
 #countdown li {
     display: inline-block;
     list-style-type: none;
-    padding: 0.5em 1em;
+    padding: 10px 0;
     margin-right: 0.5em; 
     width: 20%;
-    /* text-transform: uppercase; */
+    text-transform: uppercase;
     letter-spacing: 0.5px;
-    font-size: 1em;
+    font-size: 0.8em;
     color: #efefef;
     background-color: #888;
 }
@@ -502,7 +513,7 @@ width: 100%;
     /* color: #999; */
 }
 .timeline-content.t_left {
-    padding-right: 20px;
+    padding-right: 5px;
 }
 .timeline-content.t_right {
     padding-left: 30px;
@@ -512,9 +523,9 @@ width: 100%;
 
 .timeline-content .icon {
     height: 60px;
-    background-color: #787878;
-    margin: 0 auto;
     width: 60px;
+    /* background-color: #787878; */
+    margin: 0 auto;
 }
 .timeline-content span {
     display: block;
@@ -534,10 +545,8 @@ width: 100%;
 }
 
 .timeline-content p {
-    font-size: 0.8em;
-    line-height: 1.5em;
-    word-spacing: 1px;
-    color: #aaa;
+    line-height: 1.3em;
+    color: #cccc;
 }
 
 /* dresscode */
@@ -552,10 +561,27 @@ width: 100%;
     background-color: #303030;
 }
 
+
+
+
 /* location */
 .location {
     height: 90vh;
+    padding: 250x 0;
     /* background-color: #aaa; */
+}
+.location .textbox {
+    padding: 10px 0;
+    font-size: 0.9em;
+}
+.location .textbox strong {
+    margin-bottom: 10px;
+}
+
+#map{
+    margin-top: 20px;
+    height: 300px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 /* 
