@@ -274,7 +274,7 @@ top: 0;left: 0;height: 100%;
     font-family: 'RIDIBatang';
     /* text-align: left; */
     /* font-size: 1.15em; */
-    padding: 20px 0 50px;
+    padding: 30px 0 60px;
     background-color: #303030;
     color: #efefef;
     background-image: url("https://github.com/user-attachments/assets/534a3b1a-8f67-4244-bf08-0af0be1bcb22");
@@ -406,14 +406,12 @@ td {
 
 
 /* countdown */
-
 .container {
     color: #333;
     margin: 20px auto;
     text-align: center;
 }
 
-  
 #countdown li {
     display: inline-block;
     list-style-type: none;
@@ -424,7 +422,8 @@ td {
     letter-spacing: 0.5px;
     font-size: 0.8em;
     color: #efefef;
-    background-color: #888;
+    background-color: #787878;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 #countdown li:last-child{
@@ -458,10 +457,17 @@ padding: 0 .5rem;
     font-weight: 400;
     color: #ddd;
 }
+.schedule p.bodoni {
+    font-size: 1.2em;
+    letter-spacing: 2px;
+    color: #efefef;
+    margin: 15px 0;
+}
+
 .timeline {
     width: 100%;
     padding: 0;
-    margin: 50px auto;
+    margin: 15px auto;
     position: relative;
     overflow: hidden;
 }
@@ -550,18 +556,53 @@ width: 100%;
 }
 
 /* dresscode */
-.dresscode {
-    height: 90vh;
-    /* background-color: #aaa; */
+
+.dresscode p {
+    font-family: "RIDIBatang";
+    font-size: 1.4em;
+    line-height: 1.2;
+    margin: 10px 0 30px;
+    /* font-weight: 600; */
 }
 
 /* RSVP */
 .rsvp{
-    height: 90vh;
     background-color: #303030;
+    color: #efefef;
+}
+.rsvp h2{
+    font-size: 1.5em;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 12px;
+}
+.rsvp p {
+    padding: 10px 0;
+}
+.rsvp p.notice {
+    font-size: 1.2em;
 }
 
+.rsvp p strong{
+    font-size: 1.5em;
+    font-weight: 500;
+    color: #f0b968;
+}
 
+.rsvp a{
+    display: block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 1.5em;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #151515;
+    background-color: #ddd;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(214, 158, 228, 0.5);
+    border-radius: 4px;
+}
 
 
 /* location */
@@ -575,11 +616,12 @@ width: 100%;
     font-size: 0.9em;
 }
 .location .textbox strong {
-    margin-bottom: 10px;
+    display: block;
+    margin: 10px 0;
 }
 
 #map{
-    margin-top: 20px;
+    margin: 20px 0;
     height: 300px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
