@@ -88,7 +88,7 @@ img {
 
 /* common css */
 html, body {
-    overflow-x :  hidden;
+    overflow-x: hidden;
 }
 
 body {
@@ -119,6 +119,15 @@ h2{
 }
 
 /* main intro */
+.wrap {
+    /* position:fixed; */
+  width:100%;
+  height:100%;
+  overflow:auto;
+  -webkit-overflow-scrolling: touch; /* 스크롤 바운스 방지 */
+  
+}
+
 section.intro {
     position: relative;
     height: 100vh; 
@@ -134,8 +143,8 @@ section.intro {
 .main_img {
     position: fixed;
     z-index: -1;
-    height: 100vh; 
-    width: 100vw;
+    height: 100%; 
+    width: 100%;
     top: 0;
     left: 0;
     overflow: hidden;
@@ -592,8 +601,8 @@ width: 100%;
 .rsvp a{
     display: block;
     width: 100%;
-    height: 40px;
-    line-height: 40px;
+    height: 50px;
+    line-height: 50px;
     font-size: 1.5em;
     font-weight: 600;
     letter-spacing: 2px;
