@@ -14,82 +14,75 @@
 // });
 
 (function () {
-    const second = 1000,
-      minute = second * 60,
-      hour = minute * 60,
-      day = hour * 24;
-  
-    //I'm adding this section so I don't have to keep updating this pen every year :-)
-    //remove this if you don't need it
-    let today = new Date(),
-      dd = String(today.getDate()).padStart(2, "0"),
-      mm = String(today.getMonth() + 1).padStart(2, "0"),
-      yyyy = today.getFullYear(),
-      nextYear = yyyy + 1,
-      dayMonth = "09/14/",
-      birthday = dayMonth + yyyy;
-  
-    today = mm + "/" + dd + "/" + yyyy;
-    if (today > birthday) {
-      birthday = dayMonth + nextYear;
-    }
-    //end
-  
-    const countDown = new Date(birthday).getTime(),
-      x = setInterval(function () {
-        const now = new Date().getTime(),
-          distance = countDown - now;
-  
-        (document.getElementById("days").innerText = Math.floor(distance / day)),
-          (document.getElementById("hours").innerText = Math.floor(
-            (distance % day) / hour
-          )),
-          (document.getElementById("minutes").innerText = Math.floor(
-            (distance % hour) / minute
-          )),
-          (document.getElementById("seconds").innerText = Math.floor(
-            (distance % minute) / second
-          ));
-  
-        //do something later when date is reached
-        if (distance < 0) {
-          document.getElementById("headline").innerText = "It's my birthday!";
-          document.getElementById("countdown").style.display = "none";
-          document.getElementById("content").style.display = "block";
-          clearInterval(x);
-        }
-        //seconds
-      }, 0);
-    
+  const second = 1000,
+    minute = second * 60,
+    hour = minute * 60,
+    day = hour * 24;
 
-  })();
+  //I'm adding this section so I don't have to keep updating this pen every year :-)
+  //remove this if you don't need it
+  let today = new Date(),
+    dd = String(today.getDate()).padStart(2, "0"),
+    mm = String(today.getMonth() + 1).padStart(2, "0"),
+    yyyy = today.getFullYear(),
+    nextYear = yyyy + 1,
+    dayMonth = "09/14/",
+    birthday = dayMonth + yyyy;
 
-// window.initMap = function () {
-//   const map = new google.maps.Map(document.getElementById("map"), {
-//     center: { lat: -34.397, lng: 150.644 },
-//     zoom: 10,
-//   });
-// };
+  today = mm + "/" + dd + "/" + yyyy;
+  if (today > birthday) {
+    birthday = dayMonth + nextYear;
+  }
+  //end
 
-// Initialize and add the map
+  const countDown = new Date(birthday).getTime(),
+    x = setInterval(function () {
+      const now = new Date().getTime(),
+        distance = countDown - now;
+
+      (document.getElementById("days").innerText = Math.floor(distance / day)),
+        (document.getElementById("hours").innerText = Math.floor(
+          (distance % day) / hour
+        )),
+        (document.getElementById("minutes").innerText = Math.floor(
+          (distance % hour) / minute
+        )),
+        (document.getElementById("seconds").innerText = Math.floor(
+          (distance % minute) / second
+        ));
+
+      //do something later when date is reached
+      if (distance < 0) {
+        document.getElementById("headline").innerText = "It's my birthday!";
+        document.getElementById("countdown").style.display = "none";
+        document.getElementById("content").style.display = "block";
+        clearInterval(x);
+      }
+      //seconds
+    }, 0);
+
+
+})();
+
 let map;
 
 async function initMap() {
-  // The location of Uluru
-  const position = { lat: 40.747434, lng: -73.64539909999999 };
+  // The location of place
+  const position = { lat: 40.747352718910314, lng: -73.64533462698857 };
   // Request needed libraries.
-  //@ts-ignore
+  // @ts-ignore
   const { Map } = await google.maps.importLibrary("maps");
   const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
 
-  // The map, centered at Uluru
+  // The map, centered at place
   map = new Map(document.getElementById("map"), {
     zoom: 15,
     center: position,
+    disableDefaultUI: true,
     mapId: "DEMO_MAP_ID",
   });
 
-  // The marker, positioned at Uluru
+  // The marker, positioned at place
   const marker = new AdvancedMarkerElement({
     map: map,
     position: position,
