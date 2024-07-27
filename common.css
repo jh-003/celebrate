@@ -587,14 +587,22 @@ width: 100%;
 }
 /* dresscode */
 .dresscode {
+    background-image: url("https://github.com/user-attachments/assets/f53e966d-6e49-47a7-9a82-91089e59aa67");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
     background-color: #303030;
     color: #efefef;
+}
+.dresswrap {
+    border: 2px solid #ddd;
+    padding: 50px 0;
 }
 .dresscode p {
     font-family: "RIDIBatang";
     font-size: 1.4em;
     line-height: 1.2;
-    margin: 10px 0 30px;
+    margin-top: 15px;
     /* font-weight: 600; */
 }
 
